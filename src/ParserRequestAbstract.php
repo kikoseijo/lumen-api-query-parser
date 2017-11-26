@@ -71,7 +71,7 @@ abstract class ParserRequestAbstract
      */
     public function parser()
     {
-        $data = $this->request->except('page');
+        $data = $this->request->except('page','limit');
         foreach ($data as $field => $value) {
             $this->cleanField($field);
             $value = $this->cleanValue($value);
